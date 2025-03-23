@@ -1,0 +1,6 @@
+[build]
+  command = "npm run build"
+  publish = ".next"  # The plugin will handle function routing and static assets
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"

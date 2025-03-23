@@ -1,0 +1,55 @@
+{
+  "compilerOptions": {
+    // Target modern JavaScript features
+    "target": "ESNext",
+    // Include modern DOM APIs
+    "lib": ["dom", "dom.iterable", "esnext"],
+    // Allow JavaScript in TypeScript files if needed
+    "allowJs": true,
+    // Skip type checking of all .d.ts files (can reduce friction with dependencies)
+    "skipLibCheck": true,
+    // Enable strict type-checking
+    "strict": true,
+    // Enforce consistent casing in imports
+    "forceConsistentCasingInFileNames": true,
+    // Don't emit any output (Next.js handles bundling)
+    "noEmit": true,
+    // Enable ES module interop
+    "esModuleInterop": true,
+    // Use ESNext module system
+    "module": "ESNext",
+    // Resolve modules using Node rules
+    "moduleResolution": "node",
+    // Support importing JSON files
+    "resolveJsonModule": true,
+    // Treat each file as a separate module
+    "isolatedModules": true,
+    // Preserve JSX for Next.js to handle
+    "jsx": "preserve",
+    // Add type definitions for Node, React, and React DOM
+    "types": ["node", "react", "react-dom"],
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+
+    // ***** ADDED ALIAS CONFIG *****
+    // Base directory for non-relative imports
+    "baseUrl": ".",
+    // Map @/ to the project root, so "@/components" -> "./components"
+    "paths": {
+      "@/*": ["./*"]
+    }
+  },
+  // Automatically include these file patterns in the compilation
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "next-env.d.ts",
+    ".next/types/**/*.ts"
+  ],
+  // Exclude the node_modules folder from compilation
+  "exclude": ["node_modules"]
+}
