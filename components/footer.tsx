@@ -41,7 +41,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="https://drive.google.com/file/d/1N5FT7trw4SLgvj1TSsrV9we04PJgXwwy/view"
+                  href="https://docs.google.com/document/d/16X2FifuuQjO7I-C6FujSkPZh1asFD0uDkYmmQ5cx4P0/edit?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-600 hover:text-purple-800"
@@ -87,6 +87,8 @@ export default function Footer() {
     </footer>
   )
 }
+
+
 
 
 
