@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import AnimatedSection from "@/components/animated-section"
 import AnimatedText from "@/components/animated-text"
 import Image from "next/image"
+import Link from "next/link"
 
 export default function EventInfoPage() {
   return (
@@ -351,7 +352,8 @@ export default function EventInfoPage() {
         </div>
       </AnimatedSection>
 
-      <AnimatedSection className="mt-10" direction="up">
+      {/* Delegate Guide Section */}
+      <AnimatedSection className="mt-10 mb-10" direction="up">
         <AnimatedText as="h2" className="mb-6 text-center text-3xl font-bold text-purple-800" delay={0.1}>
           Delegate Guide
         </AnimatedText>
@@ -362,11 +364,15 @@ export default function EventInfoPage() {
           </p>
           <div className="flex justify-center">
             <Button asChild className="bg-purple-700 hover:bg-purple-800 flex items-center gap-2">
-              <a href="/files/sbmun-delegate-guide.pdf" target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://docs.google.com/document/d/16X2FifuuQjO7I-C6FujSkPZh1asFD0uDkYmmQ5cx4P0/edit?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FileText className="h-4 w-4" />
-                Download Delegate Guide
+                View Delegate Guide
                 <ExternalLink className="h-3 w-3 ml-1" />
-              </a>
+              </Link>
             </Button>
           </div>
         </div>
@@ -374,6 +380,4 @@ export default function EventInfoPage() {
     </div>
   )
 }
-
-
 
