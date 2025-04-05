@@ -40,7 +40,12 @@ export default function Footer() {
             <h3 className="mb-4 text-lg font-semibold text-purple-800">Resources</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/event-info" className="text-gray-600 hover:text-purple-800">
+                <Link
+                  href="/files/sbmun-delegate-guide.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-600 hover:text-purple-800"
+                >
                   Delegate Guide
                 </Link>
               </li>
@@ -82,4 +87,6 @@ export default function Footer() {
     </footer>
   )
 }
+
+
 
