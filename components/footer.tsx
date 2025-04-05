@@ -41,7 +41,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="/files/sbmun-delegate-guide.pdf"
+                  href="https://drive.google.com/file/d/1N5FT7trw4SLgvj1TSsrV9we04PJgXwwy/view"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-600 hover:text-purple-800"
@@ -87,6 +87,8 @@ export default function Footer() {
     </footer>
   )
 }
+
+
 
 
 
