@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
-import { CalendarDays, Clock, MapPin, Navigation, Building, Users } from "lucide-react"
+import { CalendarDays, Clock, MapPin, Navigation, Building, Users, FileText, ExternalLink } from "lucide-react"
+import { Button } from "@/components/ui/button"
 import AnimatedSection from "@/components/animated-section"
 import AnimatedText from "@/components/animated-text"
 import Image from "next/image"
@@ -132,7 +133,7 @@ export default function EventInfoPage() {
                     </li>
                     <li className="flex items-start">
                       <span className="font-semibold text-purple-700 min-w-[100px]">Senate:</span>
-                      <span className="text-gray-700">Smaller Library Room (inside the Library, straight across)</span>
+                      <span className="text-gray-700">C110 (Building C, 1st floor)</span>
                     </li>
                   </ul>
                 </CardContent>
@@ -310,7 +311,7 @@ export default function EventInfoPage() {
         </div>
       </AnimatedSection>
 
-      <AnimatedSection direction="left">
+      <AnimatedSection className="mb-10" direction="left">
         <AnimatedText as="h2" className="mb-6 text-center text-3xl font-bold text-purple-800" delay={0.1}>
           Conference Policies
         </AnimatedText>
@@ -349,7 +350,30 @@ export default function EventInfoPage() {
           </Card>
         </div>
       </AnimatedSection>
+
+      <AnimatedSection className="mt-10" direction="up">
+        <AnimatedText as="h2" className="mb-6 text-center text-3xl font-bold text-purple-800" delay={0.1}>
+          Delegate Guide
+        </AnimatedText>
+        <div className="mx-auto max-w-3xl bg-purple-50 p-6 rounded-lg shadow-md">
+          <p className="mb-4 text-gray-700">
+            We've prepared a comprehensive delegate guide to help you navigate SBMUN IX. This guide includes information
+            on parliamentary procedure, points and motions, conference policies, and more.
+          </p>
+          <div className="flex justify-center">
+            <Button asChild className="bg-purple-700 hover:bg-purple-800 flex items-center gap-2">
+              <a href="/files/sbmun-delegate-guide.pdf" target="_blank" rel="noopener noreferrer">
+                <FileText className="h-4 w-4" />
+                Download Delegate Guide
+                <ExternalLink className="h-3 w-3 ml-1" />
+              </a>
+            </Button>
+          </div>
+        </div>
+      </AnimatedSection>
     </div>
   )
 }
+
+
 
